@@ -21,8 +21,8 @@ public class ConfiguracaoDeSeguranca extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.antMatchers("/clientes").hasAnyRole("ADMIN", "VEND")
-				.antMatchers("/fornecedores").hasRole("ADMIN")
+//				.antMatchers("/clientes").hasAnyRole("ADMIN", "VEND")
+//				.antMatchers("/fornecedores").hasRole("ADMIN")
 				.anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and().logout()
 				.logoutSuccessUrl("/login?logout").permitAll().and().csrf().disable();
 	}
