@@ -6,8 +6,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-	// ao digitar no browse http://localhost:8080/ a aplicação responde com pagina
-	// menu
+	
+	// When typing http://localhost:8080/ the applications responds with the page menu
 	@GetMapping("/")
 	public ModelAndView menu() {
 		return new ModelAndView("paginaMenu");

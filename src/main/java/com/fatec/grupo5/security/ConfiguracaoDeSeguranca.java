@@ -21,8 +21,8 @@ public class ConfiguracaoDeSeguranca extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				// .antMatchers("/clientes").hasAnyRole("ADMIN", "VEND")
-				// .antMatchers("/fornecedores").hasRole("ADMIN")
+				.antMatchers("/clientes").hasAnyRole("ADMIN", "VEND")
+				.antMatchers("/fornecedores").hasRole("ADMIN")
 				.anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and().logout()
 				.logoutSuccessUrl("/login?logout").permitAll().and().csrf().disable();
 	}
@@ -30,10 +30,10 @@ public class ConfiguracaoDeSeguranca extends WebSecurityConfigurerAdapter {
 	// configuracao de autenticacao
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
-		// auth.inMemoryAuthentication()
-		// .withUser("jose").password(pc().encode("123")).roles("ADMIN")
-		// .and()
-		// .withUser("maria").password(pc().encode("456")).roles("VEND");
+//		auth.inMemoryAuthentication()
+//		.withUser("jose").password(pc().encode("123")).roles("ADMIN")
+//		.and()
+//		.withUser("maria").password(pc().encode("456")).roles("VEND");
 		auth.userDetailsService(userDetailsService).passwordEncoder(pc());
 	}
 
