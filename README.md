@@ -1,9 +1,12 @@
 ### Fatec ZL - Centro Paula Souza
 ##### Disciplina - Programação Web III
-Grupo X
-- Joaquim da Silva Xavier
-- Jose Bonifacio
-- Isabel Cristina Leopoldina
+Grupo 5
+- Alex Lopes dos Santos Dias
+- Gabriel Lopes Ferreira Ramos
+- Igor Gustavo A. Gonzalez
+- Lucas Lima Gomes
+- Rafaela Bezerra Martins
+- Thalya dos Santos Cuin
 ##### Processo de Desenvolvimento de Software - PDS
 > O PDS segue uma abordagem interativa incremental adaptada do Processo Unificado (Larman, 2006 - cap02). Cada atividade da interação tem uma definição de pronto estabelecida com objetivo de controlar a qualidade.
 ![ciclo de desenvolvimento up](https://user-images.githubusercontent.com/68782201/180198367-01b275f2-1bf1-409c-a7b7-46f231e4ff6e.png)
