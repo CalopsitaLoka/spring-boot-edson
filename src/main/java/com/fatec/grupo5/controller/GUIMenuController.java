@@ -15,4 +15,5 @@ public class GUIMenuController {
 	public ModelAndView home() {
 		return new ModelAndView("paginaMenu");
 	}
+	
 }

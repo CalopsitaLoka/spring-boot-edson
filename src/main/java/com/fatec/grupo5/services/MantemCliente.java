@@ -3,8 +3,9 @@ package com.fatec.grupo5.services;
 import java.util.List;
 import java.util.Optional;
 
-import com.fatec.grupo5.model.Cliente;
+import javax.validation.Valid;
 
+import com.fatec.grupo5.model.Cliente;
 public interface MantemCliente {
 	List<Cliente> consultaTodos();
 
@@ -12,7 +13,7 @@ public interface MantemCliente {
 
 	Optional<Cliente> consultaPorId(Long id);
 
-	Optional<Cliente> save(Cliente cliente);
+	Optional<Cliente> save(@Valid Cliente cliente);
 
 	void delete(Long id);
 

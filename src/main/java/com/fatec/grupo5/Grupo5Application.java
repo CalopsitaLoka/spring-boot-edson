@@ -17,7 +17,6 @@ public class Grupo5Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Grupo5Application.class, args);
-		System.out.println(new BCryptPasswordEncoder().encode("123"));
 	}
 
 	@Autowired

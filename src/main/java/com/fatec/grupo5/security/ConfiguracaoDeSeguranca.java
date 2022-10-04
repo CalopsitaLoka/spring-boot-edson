@@ -23,6 +23,7 @@ public class ConfiguracaoDeSeguranca extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 //				.antMatchers("/clientes").hasAnyRole("ADMIN", "VEND")
 //				.antMatchers("/fornecedores").hasRole("ADMIN")
+				
 				.anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and().logout()
 				.logoutSuccessUrl("/login?logout").permitAll().and().csrf().disable();
 	}
@@ -34,6 +35,8 @@ public class ConfiguracaoDeSeguranca extends WebSecurityConfigurerAdapter {
 //		.withUser("jose").password(pc().encode("123")).roles("ADMIN")
 //		.and()
 //		.withUser("maria").password(pc().encode("456")).roles("VEND");
+		//auth.inMemoryAuthentication()
+		//.withUser()
 		auth.userDetailsService(userDetailsService).passwordEncoder(pc());
 	}
 
